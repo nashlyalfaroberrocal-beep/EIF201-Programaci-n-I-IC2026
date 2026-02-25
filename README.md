@@ -16,7 +16,7 @@
 
 
 
-\## Descripción 
+\## Descripción
 
 Repositorio del curso Programación I (EIF201).
 
@@ -27,20 +27,4 @@ Contiene laboratorios, ejercicios de practica y el proyecto del curso.
 \## Estructura del repositorio
 
 \_ /sesion02 . Git, Arreglos, Matrices y Cadenas
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
