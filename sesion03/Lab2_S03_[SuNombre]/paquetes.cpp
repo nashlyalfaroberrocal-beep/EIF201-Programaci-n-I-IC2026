@@ -1,19 +1,51 @@
-// Lab2_S03_[SuNombre].cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
-//
-
+#include "paquetes.h"
 #include <iostream>
+#include <iomanip>
 
-int main()
+double* CrearRegistro(int& cantidad)
 {
-    std::cout << "Hello World!\n";
+	double* Paquetes = new double[cantidad];
+	return Paquetes;
 }
 
-// Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
-// Depurar programa: F5 o menú Depurar > Iniciar depuración
+void IngresoPesos(double* pesos, int cantidad)
+{
+	for (int i = 0; i < cantidad; ++i) {
+		std::cout << "Ingrese el peso del paquete " << (i + 1) << ": ";
+		std::cin >> pesos[i];
+	}
+}
 
-// Sugerencias para primeros pasos: 1. Use la ventana del Explorador de soluciones para agregar y administrar archivos
-//   2. Use la ventana de Team Explorer para conectar con el control de código fuente
-//   3. Use la ventana de salida para ver la salida de compilación y otros mensajes
-//   4. Use la ventana Lista de errores para ver los errores
-//   5. Vaya a Proyecto > Agregar nuevo elemento para crear nuevos archivos de código, o a Proyecto > Agregar elemento existente para agregar archivos de código existentes al proyecto
-//   6. En el futuro, para volver a abrir este proyecto, vaya a Archivo > Abrir > Proyecto y seleccione el archivo .sln
+
+double CalcularPesoTotal(double* pesos, int cantidad)
+{
+	double total = 0.0;
+	for (int i = 0; i < cantidad; ++i) {
+		total = pesos[i] + total;
+
+	}
+	return 0.0;
+}
+
+
+
+int ContarSobreLimite(const double* pesos, int cantidad, double limite)
+{
+	int contador = 0;
+	for (int i = 0; i < cantidad; ++i) {
+		if (pesos[i] > limite){
+			contador++; }
+	}
+	return 0;
+}
+
+
+
+const double* BuscarMasPesado(const double* pesos, int cantidad)
+{
+	for (int i = 0; i < cantidad; ++i) {
+		if (pesos[i] > pesos[i + 1]){
+			return &pesos[i]; }
+	}
+	return nullptr;
+}

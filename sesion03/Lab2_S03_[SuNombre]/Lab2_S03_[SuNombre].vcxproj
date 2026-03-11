@@ -24,6 +24,7 @@
     <ProjectGuid>{cec97ece-a226-4c90-82ee-e940afe7461a}</ProjectGuid>
     <RootNamespace>Lab2S03SuNombre</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Lab2_S03_[Nashly_Alfaro]</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -127,7 +128,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Lab2_S03_[SuNombre].cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="paquetes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="paquetes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
