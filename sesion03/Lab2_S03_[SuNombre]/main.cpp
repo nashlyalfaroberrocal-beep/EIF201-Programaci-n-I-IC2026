@@ -2,34 +2,38 @@
 #include "paquetes.h"
 
 
-int main()
-{
-	int Cantidad = 0;
-	double pesos = 0;
-	double LimitePeso = 0;
-	double* PesoPaquetes = nullptr;
+int main() {
+    int cantidad = 0; // Let's use one consistent variable
+    double limitePeso = 0;
+    double* pesoPaquetes = nullptr;
 
-	int Paquetes =0;
-	while (Paquetes <= 0)
-	{
-		std::cout << "Ingrese la cantidad de paquetes: ";
-		std::cin >> Paquetes;
+    // 1. Get the quantity
+    while (cantidad <= 0) {
+        std::cout << "Ingrese la cantidad de paquetes: ";
+        std::cin >> cantidad;
+    }
 
-	}
-	PesoPaquetes = CrearRegistro(Paquetes);
+    // 2. Allocate memory
+    pesoPaquetes = CrearRegistro(cantidad);
 
-	IngresoPesos(PesoPaquetes, Cantidad);
+    // 3. Fill the array (Pass 'cantidad', not a zeroed variable)
+    IngresoPesos(pesoPaquetes, cantidad);
 
-	std::cout << "ingrese el limite de peso: ";
-	std::cin >> LimitePeso;
+    // 4. Get the limit and perform calculations
+    std::cout << "Ingrese el limite de peso: ";
+    std::cin >> limitePeso;
 
-	std::cout << "El peso total de los paquetes es: " << CalcularPesoTotal(PesoPaquetes, Cantidad) << std::endl;
+    std::cout << "El peso total de los paquetes es: " << CalcularPesoTotal(pesoPaquetes, cantidad) << std::endl;
 
-	std::cout << "El paquete mas pesado pesa: " << *BuscarMasPesado(PesoPaquetes, Cantidad) << std::endl;
+    // Note: We should check if the pointer is null before dereferencing it with '*'
+    const double* masPesado = BuscarMasPesado(pesoPaquetes, cantidad);
+    if (masPesado != nullptr) {
+        std::cout << "El paquete mas pesado pesa: " << *masPesado << std::endl;
+    }
 
-	delete[] PesoPaquetes;
+    // 5. Cleanup
+    delete[] pesoPaquetes;
+    pesoPaquetes = nullptr;
 
-	PesoPaquetes = nullptr;
-
-
+    return 0;
 }
