@@ -11,63 +11,59 @@ namespace UNA {
         this->activo = true;
     }
 
+
     std::string Vehiculo::getPlaca() const {
         return placa;
     }
-
     std::string Vehiculo::getMarca() const {
         return marca;
     }
-
     int Vehiculo::getYear() const {
         return Year;
     }
-
     double Vehiculo::getKilometraje() const {
         return kilometraje;
     }
-
     bool Vehiculo::getActivo() const {
         return activo;
     }
-
     void Vehiculo::registrarKilometros(double km) {
-
         if (!activo) {
             std::cout << "Error: El vehiculo esta fuera de servicio" << std::endl;
             return;
-        }
+      }
+
 
         if (km <= 0) {
             std::cout << "Error: Los kilometros deben ser positivos" << std::endl;
-            return;
+           return;
         }
-
         kilometraje += km;
+
+
     }
 
-    void Vehiculo::desactivar() {
 
+    void Vehiculo::desactivar() {
         if (!activo) {
             std::cout << "El vehiculo ya esta fuera de servicio" << std::endl;
             return;
         }
-
         activo = false;
+
     }
 
     void Vehiculo::reactivar() {
-
         if (activo) {
             std::cout << "El vehiculo ya esta activo" <<std::endl;
             return;
-        }
+       }
 
         activo = true;
+
     }
 
     void Vehiculo::mostrar() const {
-
         std::cout << "Placa: " << placa << std::endl;
         std::cout << "Marca: " << marca << std::endl;
         std::cout << "Anio: " << Year << std::endl;

@@ -18,22 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Flota.h" />
-    <ClInclude Include="Vehiculo.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="extra.cpp" />
-    <ClCompile Include="Flota.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Vehiculo.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c08d8caf-43b3-42d9-b029-9726301c79f6}</ProjectGuid>
-    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <ProjectGuid>{dd6aa9a2-cca2-4756-a475-d3d822e1bd9f}</ProjectGuid>
+    <RootNamespace>laboratorio05</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>ListaSimple_E1</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -136,6 +127,15 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Estudiante.cpp" />
+    <ClCompile Include="laboratorio05.cpp" />
+    <ClCompile Include="ListaEstudiante.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Estudiante.h" />
+    <ClInclude Include="ListaEstudiante.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

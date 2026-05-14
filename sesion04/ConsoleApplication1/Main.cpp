@@ -39,7 +39,7 @@ int main() {
             std::cout << "Marca: ";
             std::cin >> marca;
 
-            std::cout << "Year: ";
+            std::cout << "Año: ";
             std::cin >> Year;
 
             std::cout << "Kilometraje: ";
@@ -47,29 +47,24 @@ int main() {
 
             Vehiculo* v = new Vehiculo(placa, marca, Year, km);
             flota.agregar(v);
-
             break;
         }
 
         case 2: {
-
             std::string placa;
-
             std::cout << "Placa: ";
             std::cin >> placa;
 
             Vehiculo* v = flota.buscarPorPlaca(placa);
-
             if (v != nullptr)
                 v->mostrar();
             else
-                std::cout << "Vehiculo no encontrado\n";
-
+                std::cout << "Vehiculo no encontrado" << std::endl;
             break;
         }
 
-        case 3: {
 
+        case 3: {
             std::string marca;
 
             std::cout << "Marca: ";
@@ -78,92 +73,95 @@ int main() {
             flota.mostrarPorMarca(marca);
 
             break;
-        }
+       }
+
 
         case 4: {
-
             std::string placa;
             double km;
-
             std::cout << "Placa: ";
             std::cin >> placa;
 
             Vehiculo* v = flota.buscarPorPlaca(placa);
 
             if (v != nullptr) {
-
                 std::cout << "Kilometros a agregar: ";
                 std::cin >> km;
-
                 v->registrarKilometros(km);
-            }
+           }
 
             break;
         }
 
+
+
+
+
         case 5: {
-
             std::string placa;
-
             std::cout << "Placa: ";
             std::cin >> placa;
 
             Vehiculo* v = flota.buscarPorPlaca(placa);
-
             if (v != nullptr)
                 v->desactivar();
 
             break;
         }
 
+
+
+
         case 6: {
-
             std::string placa;
-
             std::cout << "Placa: ";
             std::cin >> placa;
 
             Vehiculo* v = flota.buscarPorPlaca(placa);
-
             if (v != nullptr)
                 v->reactivar();
-
             break;
         }
 
+
+
+
+
         case 7: {
-
             std::string placa;
-
             std::cout << "Placa: ";
             std::cin >> placa;
 
             flota.eliminar(placa);
-
             break;
         }
 
-        case 8:
 
+
+        case 8:
             flota.mostrarTodos();
             break;
 
-        case 9:
 
+
+        case 9:
             std::cout << "Vehiculos activos: "
                 << flota.contarActivos()
                 << std::endl;
             break;
 
-        case 10:
 
-            std::cout << "Saliendo del programa...\n";
+
+
+        case 10:
+            std::cout << "Saliendo...." << std::endl;
             break;
 
         default:
-
-            std::cout << "Opcion invalida\n";
+            std::cout << "Opcion invalida"<< std::endl;
         }
+
+
 
     } while (opcion != 10);
 
