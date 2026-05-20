@@ -1,10 +1,10 @@
 #include "RotacionCircular.h"
 #include "HistorialDoble.h"
-namespace EIF201 {
+using namespace EIF201;
 
-	int main() {
-		//modulo a -historial doble 
-		cout << "\nMODULO A: HistorialDobl" << endl;
+int main() {
+	//modulo a -historial doble 
+	cout << "\nMODULO A: HistorialDobl" << endl;
 		{
 			HistorialDoble h;
 
@@ -74,10 +74,9 @@ namespace EIF201 {
 			r.eliminarLocutor("Adriana");
 			while (!r.estaVacia()) r.eliminarTurnoActual();
 			cout << "Vacia: " << (r.estaVacia() ? "si" : "no") << endl; // si
-			cout << "Siguiente vacia: '" << r.siguiente() << "'" << endl; // ''
-		}
+					cout << "Siguiente vacia: '" << r.siguiente() << "'" << endl; // ''
+				}
 
-		return 0;
-	}
-}
+				return 0;
+			}
 
